@@ -1,6 +1,6 @@
 name: terra_apple_health
 description: Flutter package to interact with Terra's Apple HealthKit SDK
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/indigothm/flutter-terra-apple
 
 environment:

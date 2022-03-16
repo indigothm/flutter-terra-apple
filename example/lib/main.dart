@@ -33,7 +33,14 @@ class _MyAppState extends State<MyApp> {
               );
               final authResult = await terra.auth();
               if (authResult['terra_id'] != null) {
-                terra.initTerra(userId: authResult['terra_id']);
+                terra
+                    .initTerra(userId: authResult['terra_id'])
+                    .then((resultMap) {
+                  //Send sample data to webhook
+                  terra.getDaily(
+                      DateTime.now().subtract(const Duration(days: 1)),
+                      DateTime.now().add(const Duration(days: 1)));
+                });
               }
             }),
         appBar: AppBar(

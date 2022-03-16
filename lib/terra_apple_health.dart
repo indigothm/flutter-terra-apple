@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/services.dart';
 
 class TerraAppleHealth {
@@ -28,29 +27,29 @@ class TerraAppleHealth {
 
   getDaily(DateTime startDate, DateTime endDate) async {
     await _channel.invokeMethod('getDaily', {
-      'startDate': startDate.toIso8601String(),
-      'endDate': endDate.toIso8601String()
+      'startDate': startDate.toUtc().toIso8601String(),
+      'endDate': endDate.toUtc().toIso8601String()
     });
   }
 
   getSleep(DateTime startDate, DateTime endDate) async {
     await _channel.invokeMethod('getSleep', {
-      'startDate': startDate.toIso8601String(),
-      'endDate': endDate.toIso8601String()
+      'startDate': startDate.toUtc().toIso8601String(),
+      'endDate': endDate.toUtc().toIso8601String()
     });
   }
 
   getActivity(DateTime startDate, DateTime endDate) async {
     await _channel.invokeMethod('getActivity', {
-      'startDate': startDate.toIso8601String(),
-      'endDate': endDate.toIso8601String()
+      'startDate': startDate.toUtc().toIso8601String(),
+      'endDate': endDate.toUtc().toIso8601String()
     });
   }
 
   getBody(DateTime startDate, DateTime endDate) async {
     await _channel.invokeMethod('getBody', {
-      'startDate': startDate.toIso8601String(),
-      'endDate': endDate.toIso8601String()
+      'startDate': startDate.toUtc().toIso8601String(),
+      'endDate': endDate.toUtc().toIso8601String()
     });
   }
 

@@ -44,7 +44,7 @@ public class SwiftTerraAppleHealthPlugin: NSObject, FlutterPlugin {
           getActivity(arguments: call.arguments, result: result)
       } else if call.method == "getAthlete" {
           getAthlete()
-      } 
+      }
       
   }
     
@@ -91,6 +91,7 @@ public class SwiftTerraAppleHealthPlugin: NSObject, FlutterPlugin {
                 result(["success": false, "method": "getDaily", "message" : "Invalid Call Arguments"])
           }
      }
+    
      func getSleep(arguments: Any?, result: @escaping FlutterResult){
          if let args = arguments as? Dictionary<String, Any>, let startDate = args["startDate"] as? String, let endDate = args["endDate"] as? String {
                 let parsedStartDate = parseIso8601Date(dateString: startDate)
@@ -127,6 +128,7 @@ public class SwiftTerraAppleHealthPlugin: NSObject, FlutterPlugin {
     
     func parseIso8601Date(dateString: String?) -> Date? {
         let newFormatter = ISO8601DateFormatter()
+        newFormatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
         let parsedDate = newFormatter.date(from: dateString ?? "")
         return parsedDate
     }
