@@ -1,0 +1,2 @@
+const terraTestingAPIKey = "";
+const terraTestDevID = "";

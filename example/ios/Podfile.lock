@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - terra_apple_health (0.0.1):
+    - Flutter
+    - TerraSwift (~> 1.1.4)
+  - TerraSwift (1.1.4)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - terra_apple_health (from `.symlinks/plugins/terra_apple_health/ios`)
+
+SPEC REPOS:
+  trunk:
+    - TerraSwift
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  terra_apple_health:
+    :path: ".symlinks/plugins/terra_apple_health/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  terra_apple_health: 567f3bde5634789d2bc82ca29c5af92eb689d4b0
+  TerraSwift: f4e35c0e715ac70fcc1400bdd2c67552a79e699f
+
+PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
+
+COCOAPODS: 1.11.2
